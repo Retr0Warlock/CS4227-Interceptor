@@ -12,4 +12,12 @@ public class ContextObject {
         this.rental = r;
         this.customer = c;
     }
+     
+	public String getMovieDetails() {
+		return rental.getMovie().getTitle();
+    }
+		
+	public String getCustomerName() {
+        return customer.getName();
+    }
 }
