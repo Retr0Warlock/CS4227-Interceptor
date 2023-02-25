@@ -20,4 +20,16 @@ public class ContextObject {
 	public String getCustomerName() {
         return customer.getName();
     }
+
+	public double getPrice() {
+        return rental.getCharge();
+    }
+
+    public double getDuration() {
+        return rental.getDaysRented();
+    }
+
+    public double getTotalFrequentRenterPoints(){
+        return rental.getFrequentRenterPoints();
+    }
 }
