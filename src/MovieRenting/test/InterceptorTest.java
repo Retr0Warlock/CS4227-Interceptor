@@ -2,6 +2,7 @@ package MovieRenting.test;
 
 import MovieRenting.*;
 import MovieRenting.Interceptor.*;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class InterceptorTest {
@@ -25,10 +26,11 @@ public class InterceptorTest {
 
         // Calling the interception points
         customer.addRental(rental1);
-        customer.Statement();
+        assertEquals("Rental Record for Ben" + "\n" + "\tThe Matrix: 22.5" + "\n" + "Amount owed is 22.5" + "\n" + "You earned 2.0 frequent renter points", customer.Statement());
+        System.out.println(customer.Statement());
 
         customer.addRental(rental2);
-        customer.Statement();
-
+        assertEquals("Rental Record for Ben" + "\n" + "\tThe Matrix: 22.5" + "\n" + "\tLord of The Rings: 1.5" + "\n" + "Amount owed is 24.0" + "\n" + "You earned 3.0 frequent renter points", customer.Statement());
+        System.out.println(customer.Statement());
     }
 }
